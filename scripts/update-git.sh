@@ -57,6 +57,8 @@ current_branch=$(git symbolic-ref --short HEAD)
 echo "Updating the '$current_branch' branch of the repo located at '$local_repo'..."
 git pull origin "$current_branch"
 
+git config pull.rebase false
+
 # Check if the update was successful
 if [ $? -eq 0 ]; then
     echo "The git repo has been updated successfully."
