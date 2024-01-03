@@ -15,7 +15,7 @@
   },
   "scripts": {
     "clean": "rm -rf build",
-    "deploy": "gh-pages -b build",
+    "deploy": "gh-pages -b gh-pages -d build",
     "predeploy": "yarn build",
     "start": "react-scripts start",
     "build": "yarn clean && react-scripts build",
