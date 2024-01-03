@@ -53,11 +53,9 @@ fi
 # Get the name of the current branch
 current_branch=$(git symbolic-ref --short HEAD)
 
-# Pull the latest changes from the remote repo
+# Pull the latest changes from the remote repo with rebase
 echo "Updating the '$current_branch' branch of the repo located at '$local_repo'..."
-git pull origin "$current_branch"
-
-git config pull.rebase false
+git pull --rebase origin "$current_branch"
 
 # Check if the update was successful
 if [ $? -eq 0 ]; then
@@ -67,7 +65,7 @@ else
     exit 1
 fi
 
-# Push changes to remote repo
+# Push changes to remote repo with force to override
 git push origin "$current_branch"
 
 echo "Changes pushed to remote repo."
