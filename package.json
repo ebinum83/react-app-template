@@ -1,0 +1,43 @@
+{
+  "name": "react-app-template",
+  "author": "ebinum83",
+  "homepage": ".",
+  "license": "MIT",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "gh-pages": "^6.1.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.2",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "clean": "rm -rf build",
+    "deploy": "gh-pages -b build",
+    "predeploy": "yarn build",
+    "start": "react-scripts start",
+    "build": "yarn clean && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
